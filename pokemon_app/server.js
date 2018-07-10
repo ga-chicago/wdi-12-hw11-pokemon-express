@@ -5,11 +5,11 @@ pokemon = require("./models/pokemon.js");
 
 app.get('/asdf', (req, res) => {
 
-  res.send('Welcome to the Pokemon App!')
+  res.send('Welcome to the Pokemon App!')   //// This returns the string
 });
 
-app.get("/pokemon", (req, res) => {
-  res.send(pokemon)
+app.get("/pokemon", (req, res) => {  //// Express's own method "Get" allowing /pokemon to be part of the url to launch the rest of this
+  res.render("index.ejs")      //// Render always look in views folder, added index.ejs as string to search for
 });
 
 
