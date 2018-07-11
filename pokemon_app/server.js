@@ -16,6 +16,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-	res.send(Pokemon);
-})
+	res.render('index.ejs', {
+		pokemon: Pokemon
+	});
+});
 
