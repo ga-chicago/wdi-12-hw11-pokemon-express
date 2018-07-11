@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const PORT = 3400;
+
 pokemon = require("./models/pokemon.js");
+
+app.use(express.static('public'))
 
 app.get('/asdf', (req, res) => {            //// This is a test "get"
   res.send('Welcome to the Pokemon App!')   //// This returns the string
@@ -16,9 +19,6 @@ app.get("/pokemon/:id", (req, res) => {  //// This takes us to individual pokemo
       pokemon: pokemon[req.params.id]    //// Provides id number to allow proper index to load- corresponding with line 14's url
   })
 });
-
-
-
 
 
 
