@@ -23,7 +23,6 @@ app.get("/pokemon/:id", (req, res) => {  //// This takes us to individual pokemo
 
 
 
-
 app.listen(3400, () => {      //// This runs listen function, setting up the port. Also logs for troubleshoting.
   console.log("Server is on port: 3400");
 })
