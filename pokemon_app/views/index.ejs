@@ -14,9 +14,9 @@
 	<ul>
 
 	<% for(let i = 0; i < pokemon.length; i++) { %>
-		<li><h3><%= pokemon[i].name %></h3></li>
+		<li><h3><a href="/pokemon/<%=i%>"><%= pokemon[i].name %></a></h3></li>
 	<% } %>
-	
+
 	</ul>
 
 </body>
