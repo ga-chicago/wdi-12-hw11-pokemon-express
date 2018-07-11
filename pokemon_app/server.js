@@ -3,8 +3,7 @@ const app = express();
 const PORT = 3400;
 pokemon = require("./models/pokemon.js");
 
-app.get('/asdf', (req, res) => {
-
+app.get('/asdf', (req, res) => {            //// This is a test get
   res.send('Welcome to the Pokemon App!')   //// This returns the string
 });
 
@@ -12,7 +11,9 @@ app.get("/pokemon", (req, res) => {  //// Express's own method "Get" allowing /p
   res.render("index.ejs")      //// Render always look in views folder, added index.ejs as string to search for
 });
 
-
+app.get("/pokemon/:id", (req, res) => {
+  res.send(req.params.id);
+});
 
 
 
