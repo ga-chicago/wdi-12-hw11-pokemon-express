@@ -10,10 +10,10 @@
     </style>
   </head>
   <body>
-    <h1>See All The Pokemon!</h1>
+    <h1>See All The Pokemon!</h1> <!-- Sets the hero font -->
 
     <ul>
-
+      <!-- This for loop iterates over the database, loads li of pokemon and provides links using index number -->
       <% for (var i = 0; i < pokemon.length; i++) { %>
         <a href=<%="/pokemon/"+[i]%> ><li><%= pokemon[i].name %></li></a>
       <% } %>

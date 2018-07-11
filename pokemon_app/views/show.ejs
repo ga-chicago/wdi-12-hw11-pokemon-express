@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>See All The Pokemon!</title>
+    <style type="text/css">
+    body {
+      background-color: gray;
+    }
+    </style>
   </head>
   <body>
+    <h1>Gotta Catch 'Em All</h1>
 
+    <h2>Say hello  to: <%= pokemon.name%> </h2>
+    <br/>
+    <br/>
+    <img src="<%=pokemon.img%>">
+    <br/>
+    <br/>
+    <a href="/pokemon">Back to previous page</a>
   </body>
 </html>
