@@ -1,0 +1,44 @@
+body {
+  color: blanchedalmond;
+  background-color: steelblue;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  border: 2px solid blanchedalmond;
+  background-color: #1E1280;
+}
+
+h2 {
+  text-decoration: none;
+  color: #1E1280;
+  font-size: 36px;
+}
+
+button {
+  font-size: 12px;
+
+  font-family: 'Lato', sans-serif;
+}
+
+#newPoke {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1E1280;
+  font-family: 'Lato', sans-serif;
+  border: 2px solid #1E1280;
+  background-color: blanchedalmond;
+}
+
+img {
+  border: 5px solid #1E1280;
+}

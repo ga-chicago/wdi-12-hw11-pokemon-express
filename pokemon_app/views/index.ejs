@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>Pokemon</title>
+</head>
+<body>
+
+  <h1>Pokemon</h1>
+    <ul>
+    <% for (let i = 0; i < pokemon.length; i++) { %>
+      <li>
+
+        <h2>
+        <a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a>
+        </h2>
+
+        <form method="POST" action="/pokemon/<%=i%>?_method=DELETE">
+          <button type="submit">Delete <%=pokemon[i].name%>?</button>
+        </form>
+
+        <form method="GET" action="/pokemon/<%=i%>/edit">
+          <button type="submit">Edit <%=pokemon[i].name%>?</button>
+        </form>
+
+      </li>
+    <% } %> 
+  </ul>
+  <br>
+  <button id="newPoke">
+    <a href="/pokemon/new">Add a New Pokemon</a>
+  </button>
+
+</body>
+</html>
