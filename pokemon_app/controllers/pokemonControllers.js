@@ -16,6 +16,14 @@ router.get("/:id", (req, res) => {  //// This takes us to individual pokemon's I
   })
 });
 
+router.delete('/:id', (req, res) => {
+  pokemon.splice(req.params.id, 1)
+  console.log(req.params.id, " this is req.params");
+
+  res.redirect('/pokemon');
+})
+
+
 
 
 
