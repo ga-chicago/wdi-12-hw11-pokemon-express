@@ -1,29 +1,21 @@
 const express = require('express');
 const app = express();
 
-const Pokemon = require('./models/pokemon.js')
+const Pokemon = require('./models/pokemon.js');
+
+app.use(express.static('public'));
 
 const port = 3000;
+
+const pokemonController = require('./controllers/pokemonController');
+
+app.use('/pokemon', pokemonController);
 
 
 //setup the server to listen to port 3000
 app.listen(port, () => {
 	console.log('Server is listening on port 3000.');
-})
-
-app.get('/', (req, res) => {
-	res.send('Welcome to the Pokemon App!');
-})
-
-app.get('/pokemon', (req, res) => {
-	res.render('index.ejs', {
-		pokemon: Pokemon
-	});
 });
 
-app.get('/pokemon/:id', (req, res) => {
-	res.render('show.ejs', {
-		pokemon: Pokemon[req.params.id]
-	})
-})
+
 
