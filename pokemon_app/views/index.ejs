@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>See All The Pokemon!</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>See All The Pokemon!</h1> <!-- Sets the hero font -->
+
+    <ul>
+      <!-- This for loop iterates over the database, loads li of pokemon and provides links using index number -->
+      <% for (var i = 0; i < pokemon.length; i++) { %>
+        <a href=<%="/pokemon/"+[i]%> ><li><%= pokemon[i].name %></li></a>
+
+        <form method="POST" action="/pokemon/<%=i%>?_method=DELETE">
+          <input type="submit" value="DELETE">
+        </form>
+      <% } %>
+
+
+
+    </ul>
+
+
+  </body>
+</html>

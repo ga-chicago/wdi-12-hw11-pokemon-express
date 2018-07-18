@@ -1,0 +1,19 @@
+body {
+  background-color: orange;
+}
+
+h1 {
+  font-family: futura;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: futura;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+a {
+  font-size: 1.3em;
+  font-family: futura;
+}
